@@ -7,6 +7,8 @@
     <groupId>org.example</groupId>
     <artifactId>notifyPodArr</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -57,11 +59,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 
 
     <build>
+        <finalName>${artifactId}</finalName>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (maybe moved to parent pom) -->
             <plugins>
                 <plugin>
@@ -71,6 +79,5 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
     </build>
 </project>
